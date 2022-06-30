@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEMENT</title>
+</head>
+<body>
+
+    <div id="konten" class="content">
+        <h1 id="title" class="judul"></h1>
+        <p id="deskripsi" class="deskripsi"></p>
+    </div>
+
+    <script>
+
+        /*
+            ELEMENT
+
+            - Element merupakan Node yang berbentuk element, biasanya adalah element HTML, misal <html>, <head>, <body>, <div>, <table>, dan lain-lain
+            - https://developer.mozilla.org/en-US/docs/Web/API/Element 
+        */
+
+        const title = document.getElementById("title");
+        title.textContent = "JavaScript";
+
+        const deskripsi = document.getElementById("deskripsi");
+        deskripsi.textContent = "Belajar JavaScript";
+
+        
+
+        /*
+            ELEMENT PROPERTY
+
+            - Dan karena Element adalah turunan dari Node, semua property Node pun bisa digunakan di Element
+            - https://developer.mozilla.org/en-US/docs/Web/API/Element#properties
+        */
+
+        const content = document.getElementById("konten");
+
+        console.info(content.id);
+        console.info(content.className);
+        console.info(content.tagName);
+
+
+
+        /*
+            ELEMENT METHOD
+
+            - Dan karena Element adalah turunan dari Node, semua method Node pun bisa digunakan di Element
+            - https://developer.mozilla.org/en-US/docs/Web/API/Element#methods 
+        */
+
+        // deskripsi.remove();
+        // title.remove();
+
+
+
+        /*
+            MEMBUAT ELEMENT
+
+            - Sebelumnya kita hanya mengambil element menggunakan id, artinya kita perlu buat dulu element nya di HTML
+            - Kita juga bisa membuat object element baru, dan menambahkannya ke halaman web
+            - Kita bisa menggunakan method createElement(tag) pada Document
+            - https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+        */
+
+        const headline = document.createElement("h2");
+        headline.textContent = "JavaScript DOM";
+        content.appendChild(headline);
+
+
+        const paragraf = document.createElement("p");
+        paragraf.textContent = "Selamat Belajar";
+        content.appendChild(paragraf);
+
+
+
+
+    </script>
+    
+</body>
+</html>

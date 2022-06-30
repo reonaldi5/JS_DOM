@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList</title>
+</head>
+<body>
+
+    <ul id="menu1">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+
+    </ul>
+
+    <ul id="menu2">
+        <li id="satu">Satu</li>
+        <li id="dua">Dua</li>
+        <li id="tiga">Tiga</li>
+
+    </ul>
+
+    <script>
+
+
+        /*
+            Live vs Static NodeList
+
+            - NodeList memiliki 2 tipe, yaitu Live dan Static
+            - Live artinya perubahan yang terjadi pada NodeList nya, akan merubah semua NodeList yang sama
+            - Static artinya perubahan yang terjadi pada NodeList nya, tidak akan merubah semua NodeList yang sama
+            - Saat kita menggunakan element.childNodes, NodeList tersebut bersifat Live
+            - Saat kita menggunakan document.querySelectorAll(), NodeList tersebut bersifat Static
+        */
+
+       // STATIC
+
+        const list = document.querySelectorAll("li");
+
+        const menu1 = document.getElementById("menu1");
+        menu1.appendChild(document.createElement("li"));
+        menu1.appendChild(document.createElement("li"));
+
+        console.info(list);
+
+
+        // cara agar bisa nambah element nya jika static
+        // dengan cara query ulang yg method querySelectorAll();
+
+    </script>
+    
+</body>
+</html>

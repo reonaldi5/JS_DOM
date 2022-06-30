@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList</title>
+</head>
+<body>
+
+    <ul id="menu1">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+
+    </ul>
+
+    <ul id="menu2">
+        <li id="satu">Satu</li>
+        <li id="dua">Dua</li>
+        <li id="tiga">Tiga</li>
+
+    </ul>
+
+    <script>
+
+        /*
+            NodeList
+
+            - NodeList adalah kumpulan dari Node
+            - Biasanya NodeList digunakan ketika kita menyeleksi banyak Node sekaligus,
+                misal ketika kita ingin mengambil semua children di Node misalnya
+            - https://developer.mozilla.org/en-US/docs/Web/API/NodeList
+        */
+
+        // querySelectorAll()  -> method untuk melakukan query, mengambil element yg ditentukan,
+        // contoh tag "li", maka akan mengambil semua tag "li" yg ada di HTML
+
+        const list = document.querySelectorAll("li"); // mengambil semua tag li
+        console.info(list);
+
+        document.getElementById("menu1").childNodes; // mengambil child hanya yg id menu1, yaitu child li pertama
+        console.info(menu1);
+
+        document.getElementById("menu2").childNodes; // mengambil child hanya yg id menu2, yaitu child li pertama
+        console.info(menu2);
+
+
+
+    </script>
+    
+</body>
+</html>

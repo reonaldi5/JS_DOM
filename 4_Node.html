@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODE</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+    <script>
+
+        /*
+            NODE
+
+            - Node adalah base class dari Dcoument, Element dan Attr
+            - Artinya semua fitur yang dimiliki di Node dimiliki diturunannya
+            - Node dalam DOM itu bentuknya adalah Tree (pohon), artinya dengan Node, 
+                kita bisa melihat Parent (node diatas nya), Children (node dibawahnya), Sibling (node disebelahnya)
+            - https://developer.mozilla.org/en-US/docs/Web/API/Node 
+        */
+
+        const menu = document.getElementById("menu");
+        console.info(menu);
+        console.info(menu.childNodes); // NODE PROPERTY
+        menu.removeChild(document.getElementById("first"));
+        menu.removeChild(document.getElementById("second"));
+        menu.removeChild(document.getElementById("third"));
+
+        const second = document.getElementById("second");
+        console.info(second.previousSibling); // NODE PROPERTY
+        console.info(second.nextSibling); // NODE PROPERTY
+
+        /*
+            NODE PROPERTY
+
+            - Property di Node banyak berisi informasi reference ke Node lain nya,
+                seperti ke node parent nya, node children nya atau node sebelahnya
+            - https://developer.mozilla.org/en-US/docs/Web/API/Node#properties 
+        */
+
+        /*
+            NODE METHOD
+
+            - Method di Node bisa digunakan untuk memanipulasi data Node di dalam Node tersebut,
+                misal menambah/menghapus Node children
+            - https://developer.mozilla.org/en-US/docs/Web/API/Node#methods 
+        */
+
+    </script>
+    
+</body>
+</html>
